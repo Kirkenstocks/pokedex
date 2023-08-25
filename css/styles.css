@@ -12,3 +12,9 @@ body {
     
 }
 
+h1 {
+    color: #fff;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+}
