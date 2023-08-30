@@ -1,11 +1,3 @@
-//loop to display name and height of pokemon, with conditional message for height <= 0.5
-function printArrayDetails(list) {
-  for (let i = 0; i < list.length; i++) {
-    document.write(("<br>" + list[i].name + ' (height: ' + list[i].height + 'm)'));
-    
-    if (list[i].height <= 0.5) {
-      document.write(' - Aww, look at that little guy!');
-    }
 //IIFE Pokemon repository with add & getAll functions
 let pokemonRepository = (function () {
   let pokemonList = [
@@ -28,5 +20,11 @@ let pokemonRepository = (function () {
   };
 }) ();
 
+let pokemonLoopList = pokemonRepository.getAll();
+
+//forEach loop to display pokemon and their properties
+function displayPokemon(pokemon) {
+  document.write("<p>" + pokemon.number + '. ' + pokemon.name + ' (height: ' + pokemon.height + ' m, weight: ' + pokemon.weight + ' kg) -- type(s): ' + pokemon.types);
 }
-printArrayDetails(pokemonList);
+//calling loop function
+pokemonLoopList.forEach(displayPokemon);
