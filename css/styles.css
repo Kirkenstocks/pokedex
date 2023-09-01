@@ -34,7 +34,7 @@ h1 {
     display: inline-block;
     font-family: inherit;
     background-color: var(--red-dark);
-    color: var(--white);
+    color: #fff;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
