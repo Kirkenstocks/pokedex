@@ -14,11 +14,21 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   
+  function addListItem(pokemon) {
+    let showPokemon = document.querySelector('.pokemon-list');
+    let listPokemon = document.createElement('li');
+    let button = document.createElement('button');
+      button.innerText = pokemon.name;
+      button.classList.add('button');
+    listPokemon.appendChild(button);
+    showPokemon.appendChild(listPokemon);
+  }
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
-}) ();
 
 let pokemonLoopList = pokemonRepository.getAll();
 
