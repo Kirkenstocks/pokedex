@@ -28,3 +28,15 @@ h1 {
     text-align: center;
     background-color: #7e1c1c;
 }
+
+.button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--red-dark);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #000;
+}
