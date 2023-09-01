@@ -30,11 +30,9 @@ let pokemonRepository = (function () {
     addListItem: addListItem
   };
 
-let pokemonLoopList = pokemonRepository.getAll();
+  
+}) ();
 
-//forEach loop to display pokemon and their properties
-function displayPokemon(pokemon) {
-  document.write("<p>" + pokemon.number + '. ' + pokemon.name + ' (height: ' + pokemon.height + ' m, weight: ' + pokemon.weight + ' kg) -- type(s): ' + pokemon.types);
-}
-//calling loop function
-pokemonLoopList.forEach(displayPokemon);
+pokemonRepository.getAll().forEach(function(pokemon) {
+  pokemonRepository.addListItem(pokemon);
+})
