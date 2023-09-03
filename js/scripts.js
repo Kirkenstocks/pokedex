@@ -29,8 +29,6 @@ let pokemonRepository = (function () {
     getAll: getAll,
     loopPokemon: loopPokemon
   };
-
-  
 }) ();
 
 //loop function to display pokemon from repository
