@@ -14,7 +14,7 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   
-  function addListItem(pokemon) {
+  function loopPokemon(pokemon) {
     let showPokemon = document.querySelector('.pokemon-list');
     let listPokemon = document.createElement('li');
     let button = document.createElement('button');
@@ -27,12 +27,13 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
-    addListItem: addListItem
+    loopPokemon: loopPokemon
   };
 
   
 }) ();
 
+//loop function to display pokemon from repository
 pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
+  pokemonRepository.loopPokemon(pokemon);
 })
