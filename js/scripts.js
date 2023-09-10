@@ -1,4 +1,4 @@
-//IIFE Pokemon repository with add & getAll functions
+//IIFE Pokemon repository
 let pokemonRepository = (function () {
   let pokemonList = [
     {name: 'Bulbasaur', number: 1, height: 0.7, weight: 6.9, types: ['Grass', ' Poison']},
