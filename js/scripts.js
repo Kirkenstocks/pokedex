@@ -18,11 +18,14 @@ let pokemonRepository = (function () {
     console.log(pokemon);
   }
 
+  function addListItem(pokemon) {
+    let showPokemonDetails = function() {showDetails(pokemon)};
     let showPokemon = document.querySelector('.pokemon-list');
     let listPokemon = document.createElement('li');
     let button = document.createElement('button');
-      button.innerText = pokemon.name;
-      button.classList.add('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button');
+    button.addEventListener('click', showPokemonDetails);
     listPokemon.appendChild(button);
     showPokemon.appendChild(listPokemon);
   }
@@ -30,11 +33,12 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
-    loopPokemon: loopPokemon
+    showDetails: showDetails,
+    addListItem: addListItem
   };
 }) ();
 
 //loop function to display pokemon from repository
 pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.loopPokemon(pokemon);
+  pokemonRepository.addListItem(pokemon);
 })
