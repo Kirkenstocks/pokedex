@@ -14,7 +14,10 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   
-  function loopPokemon(pokemon) {
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
     let showPokemon = document.querySelector('.pokemon-list');
     let listPokemon = document.createElement('li');
     let button = document.createElement('button');
