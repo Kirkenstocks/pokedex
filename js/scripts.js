@@ -16,9 +16,13 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   
+  //function to display details of pokemon selected
   function showDetails(pokemon) {
-    console.log(pokemon);
+    loadDetails(pokemon).then(function() {
+      console.log(pokemon);
+    });
   }
+
 //function to create and display pokemon list, with click event
   function addListItem(pokemon) {
     let showPokemonDetails = function() {showDetails(pokemon)};
