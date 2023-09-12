@@ -54,6 +54,7 @@ let pokemonRepository = (function () {
     })
   }
 
+  //function to fetch pokemon details from API
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url).then(function (response) {
