@@ -9,7 +9,7 @@ let pokemonRepository = (function () {
     if(typeof pokemon === 'object' && 'name' in pokemon) {
     pokemonList.push(pokemon);
   } else {
-    console.log('Pokémon added to repository must contain name, number, height, weight, and type(s)');
+    console.log('Invalid Pokémon entry');
   }}
   
   function getAll() {
