@@ -1,10 +1,6 @@
 //IIFE Pokemon repository
 let pokemonRepository = (function () {
-  let pokemonList = [
-    {name: 'Bulbasaur', number: 1, height: 0.7, weight: 6.9, types: ['Grass', ' Poison']},
-    {name: 'Charmander', number: 4, height: 0.6, weight: 8.5, types: 'Fire'},
-    {name: 'Squirtle', number: 7, height: 0.5, weight: 9, types: 'Water'}  
-  ];
+  let pokemonList = [];
   
   //function to add pokemon to repository with conditions
   function add(pokemon) {
