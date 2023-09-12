@@ -1,6 +1,7 @@
 :root {
     --red: #a82525;
     --red-dark: #7e1c1c;
+    --light-gray: #ccc;
     --font-standard: 400;
     --font-bold: 600;
 }
@@ -31,16 +32,16 @@ h1 {
 }
 
 .button {
-    border: none;
+    border: 1px solid #000;
     display: inline-block;
     font-family: inherit;
-    background-color: var(--red-dark);
-    color: #fff;
+    background-color: var(--light-gray);
+    color: var(--red-dark);
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 1px solid #000;
     margin-bottom: 5px;
+    width: 95%;
 }
 
 .button:hover {
