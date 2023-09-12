@@ -6,9 +6,18 @@ let pokemonRepository = (function () {
     {name: 'Squirtle', number: 7, height: 0.5, weight: 9, types: 'Water'}  
   ];
   
+  //function to add pokemon to repository with conditions
   function add(pokemon) {
+    if(typeof pokemon === 'object' &&
+    'name' in pokemon &&
+    'number' in pokemon &&
+    'height' in pokemon &&
+    'weight' in pokemon &&
+    'types' in pokemon) {
     pokemonList.push(pokemon);
-  }
+  } else {
+    console.log('Pokémon added to repository must contain name, number, height, weight, and type(s)');
+  }}
   
   function getAll() {
     return pokemonList;
@@ -17,7 +26,7 @@ let pokemonRepository = (function () {
   function showDetails(pokemon) {
     console.log(pokemon);
   }
-
+//function to create and display pokemon list, with click event
   function addListItem(pokemon) {
     let showPokemonDetails = function() {showDetails(pokemon)};
     let showPokemon = document.querySelector('.pokemon-list');
