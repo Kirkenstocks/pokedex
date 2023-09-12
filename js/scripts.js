@@ -6,12 +6,7 @@ let pokemonRepository = (function () {
 
   //function to add pokemon to repository with conditions
   function add(pokemon) {
-    if(typeof pokemon === 'object' &&
-    'name' in pokemon &&
-    'number' in pokemon &&
-    'height' in pokemon &&
-    'weight' in pokemon &&
-    'types' in pokemon) {
+    if(typeof pokemon === 'object' && 'name' in pokemon) {
     pokemonList.push(pokemon);
   } else {
     console.log('Pokémon added to repository must contain name, number, height, weight, and type(s)');
