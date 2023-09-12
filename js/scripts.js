@@ -25,15 +25,18 @@ let pokemonRepository = (function () {
 
 //function to create and display pokemon list, with click event
   function addListItem(pokemon) {
-    let showPokemonDetails = function() {showDetails(pokemon)};
     let showPokemon = document.querySelector('.pokemon-list');
     let listPokemon = document.createElement('li');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('button');
-    button.addEventListener('click', showPokemonDetails);
     listPokemon.appendChild(button);
     showPokemon.appendChild(listPokemon);
+    button.addEventListener('click', function(event) {
+      showDetails(pokemon);
+    });
+  }
+
   }
 
   return {
