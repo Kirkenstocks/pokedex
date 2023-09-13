@@ -9,6 +9,6 @@ If you wish to download the project in order to run the application, simply down
 Once started, information about each Pokémon can be found by clicking on the Pokémon's button on your screen.
 
 ### Credits:
-This project utilizes Google Fonts for all text.
-All Pokémon information is sourced from the Poké API. It can be found at: https://pokeapi.co/api/v2/pokemon/  
+This project utilizes Google Fonts for all text.  
+All Pokémon information is sourced from the Poké API. It can be found at: https://pokeapi.co/api/v2/pokemon/.  
 This project was built for the CareerFoundry Full-Stack Web Development program.
