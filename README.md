@@ -1,4 +1,4 @@
-# Pokédex
+## Pokédex
 
 ### Description:
 This is a simple Pokédex application that allows the user to find details on the first 151 Pokémon. It was written with Javascript, HTML, and CSS, and loads data from an external API.
