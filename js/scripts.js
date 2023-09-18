@@ -16,14 +16,7 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   
-  //function to display details of pokemon selected
-  function showDetails(pokemon) {
-    loadDetails(pokemon).then(function() {
-      console.log(pokemon);
-    });
-  }
-
-//function to create and display pokemon list, with click event
+  //function to create and display pokemon list, with click event
   function addListItem(pokemon) {
     let showPokemon = document.querySelector('.pokemon-list');
     let listPokemon = document.createElement('li');
@@ -32,7 +25,7 @@ let pokemonRepository = (function () {
     button.classList.add('button');
     listPokemon.appendChild(button);
     showPokemon.appendChild(listPokemon);
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', () => {
       showDetails(pokemon);
     });
   }
