@@ -9,7 +9,7 @@ let pokemonRepository = (function () {
     if(typeof pokemon === 'object' && 'name' in pokemon) {
     pokemonList.push(pokemon);
   } else {
-    console.log('Invalid Pokémon entry');
+    console.log('Pokémon input is not correct');
   }}
   
   function getAll() {
