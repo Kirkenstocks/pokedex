@@ -78,7 +78,7 @@ h1 {
     padding: 15px;
     width: 100%;
     max-width: 700px;
-    text-align: left;
+    text-align: center;
 }
 
 .modal-close {
@@ -90,13 +90,22 @@ h1 {
     text-decoration: underline;
 }
 
-.modal h1 {
+.modal span {
     margin-top: 0;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: var(--font-bold);
+}
+
+.modal img {
+height: auto;                                       
 }
 
 .modal p {
     margin-bottom: 0;
+    font-size: 14px;
 }
+
 
 /* @media all and (max-width: 500px){
 
