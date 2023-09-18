@@ -82,6 +82,14 @@ let pokemonRepository = (function () {
 
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
+    let heightElement = document.createElement('p');
+    heightElement.innerText = 'Height: ' + item.height + ' m';
+
+    let weightElement = document.createElement('p');
+    weightElement.innerText = 'Weight: ' + item.weight + ' kg';
+
+    let imageElement = document.createElement('img')
+    imageElement.src = item.imageUrl;
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
