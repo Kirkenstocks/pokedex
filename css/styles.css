@@ -11,8 +11,7 @@ body {
     font-size: 16px;
     line-height: 1.3;
     display: block;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 h1 {
@@ -36,7 +35,7 @@ h1 {
     display: inline-block;
     font-family: inherit;
     background-color: var(--light-gray);
-    color: var(--red-dark);
+    color: #000;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
@@ -46,13 +45,12 @@ h1 {
 
 .button:hover {
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .pokemon-list {
     list-style-type: none;
 }
 
-@media all and (max-width: 500px){
 
 }
 
