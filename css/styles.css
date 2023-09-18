@@ -86,8 +86,9 @@ h1 {
     /* -webkit-appearance: none; */
     border: 0;
     background: none;
-    color: #777;
+    color: var(--red-dark);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .modal span {
