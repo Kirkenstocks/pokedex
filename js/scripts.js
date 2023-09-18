@@ -53,9 +53,11 @@ let pokemonRepository = (function () {
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
+      item.name = details.species.name;
+      item.order = details.order;
       item.imageUrl = details.sprites.front_default;
-      item.height = details.height;
-      item.weight = details.weight;
+      item.height = details.height / 10;
+      item.weight = details.weight / 10;
       item.types = details.types;
     }).catch(function(e) {
       console.error(e);
