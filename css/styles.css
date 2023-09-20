@@ -81,9 +81,11 @@ h1 {
     text-align: center;
 }
 
+.close-div {
+    text-align: left;
+}
+
 .modal-close {
-    float: right;
-    /* -webkit-appearance: none; */
     border: 0;
     background: none;
     color: var(--red-dark);
