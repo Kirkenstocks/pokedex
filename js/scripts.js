@@ -72,6 +72,8 @@ let pokemonRepository = (function () {
     let modal = document.createElement('div');
     modal.classList.add('modal');
 
+    let closeDiv = document.createElement('div');
+    closeDiv.classList.add('close-div');
     let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
     closeButtonElement.innerText = 'Close';
@@ -89,7 +91,8 @@ let pokemonRepository = (function () {
     let imageElement = document.createElement('img')
     imageElement.src = item.imageUrl;
 
-    modal.appendChild(closeButtonElement);
+    closeDiv.appendChild(closeButtonElement);
+    modal.appendChild(closeDiv);
     modal.appendChild(nameElement);
     modal.appendChild(heightElement);
     modal.appendChild(weightElement);
