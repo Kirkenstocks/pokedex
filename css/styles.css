@@ -13,10 +13,14 @@ body {
 
 
 .button {
+    color: #fff;
+    background-color: #7e1c1c;
 }
 
 .button:hover {
     cursor: pointer;
+    background-color: #7e1c1c;
+    opacity: 80%;
 }
 
 }
