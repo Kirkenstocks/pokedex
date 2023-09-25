@@ -87,6 +87,12 @@ let pokemonRepository = (function () {
     let weightElement = $('<span>' + 'Weight: ' + pokemon.weight + ' kg' + '</span>');
     let typeElement = $('<p class = "type-element">' + pokemon.types.join(" / ") + '</p>');
     
+    modalTitle.append(nameElement);
+    modalBody.append(imageElement);
+    modalBody.append(numberElement);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typeElement);
     
   }
 
