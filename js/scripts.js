@@ -96,6 +96,23 @@ let pokemonRepository = (function () {
     });
   }
   
+  //displaying each pokemon's info in the modal
+  function showModal(pokemon) {
+    let modalTitle = $('.modal-title');
+    let modalBody = $('.modal-body');
+
+    modalTitle.empty();
+    modalBody.empty();
+
+    let nameCapital = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
+    let nameElement = $('<h3 class="modal-title">' + nameCapital + '</h3>');
+    let imageElement = $('<img class="image-element"><br>');
+    imageElement.attr('src', pokemon.imageUrl);
+    let numberElement = $('<p>' + 'Pokédex ID Number: ' + pokemon.number + '</p>');
+    let heightElement = $('<span>' + 'Height: ' + pokemon.height + ' m / ' + '</span>');
+    let weightElement = $('<span>' + 'Weight: ' + pokemon.weight + ' kg' + '</span>');
+    let typeElement = $('<p class = "type-element">' + pokemon.types.join(" / ") + '</p>');
     
     let nameElement = document.createElement('span');
     nameElement.innerText = item.name.charAt(0).toUpperCase() + item.name.slice(1);
