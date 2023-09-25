@@ -23,6 +23,8 @@ body {
     opacity: 80%;
 }
 
+.type-element {
+    text-transform: capitalize;
 }
 
 /* :root {
