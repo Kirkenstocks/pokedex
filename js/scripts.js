@@ -78,6 +78,24 @@ let pokemonRepository = (function () {
     closeButtonElement.classList.add('modal-close');
     closeButtonElement.innerText = 'Close';
     closeButtonElement.addEventListener('click', hideModal); 
+  
+  //function to create and display pokemon list, with click event
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonItem = document.createElement('li');
+    pokemonItem.classList.add('list-group-item');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button', 'btn', 'btn-primary', 'btn-lg');
+    button.setAttribute('data-target' , '#exampleModal')
+    button.setAttribute('data-toggle', 'modal');
+    pokemonItem.appendChild(button);
+    pokemonList.appendChild(pokemonItem);
+    button.addEventListener('click', () => {
+      showDetails(pokemon);
+    });
+  }
+  
     
     let nameElement = document.createElement('span');
     nameElement.innerText = item.name.charAt(0).toUpperCase() + item.name.slice(1);
