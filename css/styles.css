@@ -4,6 +4,8 @@
     --light-gray: #ccc;
     --font-standard: 400;
     --font-bold: 600;
+body {
+    padding-top: 65px;
 }
 
 body {
