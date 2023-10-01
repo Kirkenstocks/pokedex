@@ -39,3 +39,9 @@ main {
     text-transform: capitalize;
 }
 
+footer {
+    background-color: #7e1c1c;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+}
