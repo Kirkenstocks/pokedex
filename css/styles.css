@@ -10,6 +10,13 @@ body {
     padding-top: 65px;
 }
 
+main {
+    background-color: #ccc;
+}
+
+#pokemon-container {
+    background-color: #000;
+}
 
 .navbar-brand {
     font-size: 30px;
