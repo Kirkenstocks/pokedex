@@ -24,26 +24,28 @@
       </form>
     </nav>
   </header>
-
-  <ul class="list-group pokemon-list"></ul>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Pokemon name</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Pokemon info</p>
+  <main class="d-flex flex-column justify-content-center align-items-center">
+    <div id="pokemon-container" class="container row justify-content-center">
+      <ul class="pokemon-list list-group list-group-flush d-inline-block justify-content-center"></ul>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h3 class="modal-title" id="exampleModalLabel">Loading...</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <p>Please wait. This will only take a moment.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
+  </main>
   <footer>
     <p>Built by Kirk Meyer, 2023. Find me on:</p>
       <div class="social-media">
