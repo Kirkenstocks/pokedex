@@ -116,6 +116,7 @@ let pokemonRepository = (function () {
   };
 }) ();
 
+//loading pokemon list to sceen initially
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
