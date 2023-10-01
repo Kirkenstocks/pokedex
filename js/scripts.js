@@ -49,6 +49,7 @@ let pokemonRepository = (function () {
       });
     }).catch(function(e) {
       console.error(e);
+      alert('Unable to load Pokémon data.');
     });
   }
   
@@ -85,6 +86,7 @@ let pokemonRepository = (function () {
     let nameElement = $('<h3 class="modal-title">' + nameCapital + '</h3>');
     let imageElement = $('<img class="image-element"><br>');
     imageElement.attr('src', pokemon.imageUrl);
+    imageElement.attr('alt', 'Small frontal image of ' + nameCapital);
     let numberElement = $('<p>' + 'Pokédex ID Number: ' + pokemon.number + '</p>');
     let heightElement = $('<span>' + 'Height: ' + pokemon.height + ' m / ' + '</span>');
     let weightElement = $('<span>' + 'Weight: ' + pokemon.weight + ' kg' + '</span>');
