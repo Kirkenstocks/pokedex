@@ -75,29 +75,40 @@ let pokemonRepository = (function () {
   
   //displaying each pokemon's info in the modal
   function showModal(pokemon) {
-    let modalTitle = $('.modal-title');
-    let modalBody = $('.modal-body');
+    let modalTitle = document.querySelector('.modal-title');
+    let modalBody = document.querySelector('.modal-body');
 
-    modalTitle.empty();
-    modalBody.empty();
+    modalTitle.innerHTML = '';
+    modalBody.innerHTML = '';
 
     let nameCapital = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
-    let nameElement = $('<h3 class="modal-title">' + nameCapital + '</h3>');
-    let imageElement = $('<img class="image-element"><br>');
-    imageElement.attr('src', pokemon.imageUrl);
-    imageElement.attr('alt', 'Small frontal image of ' + nameCapital);
-    let numberElement = $('<p>' + 'Pokédex ID Number: ' + pokemon.number + '</p>');
-    let heightElement = $('<span>' + 'Height: ' + pokemon.height + ' m / ' + '</span>');
-    let weightElement = $('<span>' + 'Weight: ' + pokemon.weight + ' kg' + '</span>');
-    let typeElement = $('<p class = "type-element">' + pokemon.types.join(" / ") + '</p>');
+    let nameElement = document.createElement('h3');
+    nameElement.innerText = nameCapital;
+    nameElement.classList.add('modal-title');
+
+    let imageElement = document.createElement('img');
+    imageElement.setAttribute('src', pokemon.imageUrl);
+    imageElement.setAttribute('alt', 'A small frontal image of' + nameCapital);
+
+    let numberElement = document.createElement('p');
+    numberElement.innerText = 'Pokédex ID number: ' + pokemon.number;
+
+    let heightElement = document.createElement('span');
+    heightElement.innerText = 'Height: ' + pokemon.height + ' m / ';
+
+    let weightElement = document.createElement('span');
+    weightElement.innerText = 'Weight: ' + pokemon.weight + ' kg';
+
+    let typeElement = document.createElement('p');
+    typeElement.innerText = 'Type(s): ' + pokemon.types.join(' / ');
     
-    modalTitle.append(nameElement);
-    modalBody.append(imageElement);
-    modalBody.append(numberElement);
-    modalBody.append(heightElement);
-    modalBody.append(weightElement);
-    modalBody.append(typeElement);
+    modalTitle.appendChild(nameElement);
+    modalBody.appendChild(imageElement);
+    modalBody.appendChild(numberElement);
+    modalBody.appendChild(heightElement);
+    modalBody.appendChild(weightElement);
+    modalBody.appendChild(typeElement);
     
   }
 
