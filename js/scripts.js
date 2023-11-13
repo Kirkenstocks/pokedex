@@ -129,9 +129,33 @@ let pokemonRepository = (function () {
   };
 }) ();
 
-//loading pokemon list to sceen initially
-pokemonRepository.loadList().then(function() {
-  pokemonRepository.getAll().forEach(function(pokemon) {
-    pokemonRepository.addListItem(pokemon);
+function initialize() {
+  //load pokemon details to the page
+  pokemonRepository.loadList().then(function() {
+    pokemonRepository.getAll().forEach(function(pokemon) {
+      pokemonRepository.addListItem(pokemon);
+    });
   });
-});
+  
+  //search function
+  const searchInput = document.querySelector('#search-input');
+
+  function filterPokemon(query) {
+    const pokemonButtons = document.querySelectorAll('.pokemon-button');
+    pokemonButtons.forEach((button) => {
+      const name = button.textContent.toLowerCase();
+
+      if (name.includes(query)) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    });
+  }
+  searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    filterPokemon(searchTerm);
+  });
+}
+
+initialize();
